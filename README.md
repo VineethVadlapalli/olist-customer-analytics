@@ -2,6 +2,8 @@
 
 [![ci](https://github.com/VineethVadlapalli/olist-customer-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/VineethVadlapalli/olist-customer-analytics/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/Python-3.12-2a78d6) ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-eb6834) ![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-FF4B4B) ![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFF000)
 
+**[▶ Live dashboard: olist-customer-analyticz.streamlit.app](https://olist-customer-analyticz.streamlit.app/)**
+
 **How much is a customer worth, do they come back, and who should a retention budget target?** An end-to-end customer analytics project on ~98K real orders from ~95K customers of a Brazilian e-commerce marketplace. It covers cohort retention, lifetime value, RFM segmentation, a repeat-purchase prediction model and an interactive dashboard.
 
 ![Dashboard](docs/images/cover.png)
@@ -43,7 +45,7 @@ Predicts, from first-order data, whether a customer buys again within 180 days.
 
 ![Lift by decile](docs/images/lift_by_decile.png)
 
-### 3. Interactive dashboard: [`app/streamlit_app.py`](app/streamlit_app.py)
+### 3. Interactive dashboard: [live demo](https://olist-customer-analyticz.streamlit.app/) · [`app/streamlit_app.py`](app/streamlit_app.py)
 
 KPI tiles, revenue trend, cohort heatmap, RFM segments and delivery vs reviews, all filterable by customer state and first-purchase month, with hover tooltips on every chart. Smoke-tested with Streamlit's `AppTest` in CI.
 
