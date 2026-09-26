@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync
+      - name: Build features from raw data
+        run: make features
+      - name: Re-run notebooks end to end
+        run: make notebooks
+      - name: Dashboard smoke test
+        run: make test
